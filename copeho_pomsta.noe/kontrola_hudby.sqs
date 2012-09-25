@@ -1,0 +1,13 @@
+#saveLoadManager
+~1
+?Time == _time : Goto "saveLoadManager"
+
+;--- Hra po loadu, poustim hudbu
+
+?hraju_hrad: PlayMusic "track2"
+?hraju_statek: PlayMusic "track5"
+?hraju_vila: PlayMusic "track6"
+?hraju_gang: PlayMusic "track3"
+
+_time = Time
+Goto "saveLoadManager"

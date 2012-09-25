@@ -1,0 +1,48 @@
+statkari=[statek1,statek2,statek3,statek4,statek5,statek6,statek7,statek8,statek9,statek10]
+@(!Alive statek1)
+@(!Alive statek2)
+@(!Alive statek3)
+@(!Alive statek4)
+@(!Alive statek5)
+@(!Alive statek6)
+@(!Alive statek7)
+@(!Alive statek8)
+@(!Alive statek9)
+@(!Alive statek10)
+
+PlayMusic "track1"
+12 fademusic 0
+TitleCut["","BLACK IN",2]
+DisableUserInput True
+
+SetAccTime 1
+
+_camera = "camera" CamCreate [0,0,0] 
+_camera CameraEffect ["Internal","Back"]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+
+_camera CamSetPos [(GetPos Player Select 0)+3, (GetPos Player Select 1)+3, 4]
+_camera CamSetTarget Player
+_camera CamCommit 0
+@CamCommitted _camera
+
+_camera CamSetPos [(GetPos Player Select 0)+10, (GetPos Player Select 1)+10, 24]
+_camera CamCommit 12
+~10
+TitleCut["","BLACK OUT",2]
+~2
+TitleCut["","BLACK IN",2]
+
+0 fademusic 1
+
+CutRSC ["Default","Plain Down",100]
+_camera CameraEffect ["Terminate","Back"]
+CamDestroy _camera
+
+;TitleCut["","BLACK OUT",2]
+
+DisableUserInput False
+[] Exec "chovani_vila.sqs"
+
+Exit

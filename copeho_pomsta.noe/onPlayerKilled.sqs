@@ -1,0 +1,17 @@
+setacctime 1
+2 fademusic 2
+~2
+SkipTime 10.75
+
+_camera = "camera" CamCreate [0,0,0] 
+_camera CameraEffect ["Internal","Back"]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+
+_camera camSetTarget [-97679.32,-6505.39,55.64]
+_camera camSetPos [1706.96,4500.39,91.48]
+_camera camSetFOV 0.700
+_camera camCommit 0
+
+EnableEndDialog
+Exit

@@ -1,0 +1,13 @@
+_hlidac=_this Select 0
+_koho = _this Select 1
+
+#znova
+~1
+?poplach_statek:Exit
+?(_hlidac KnowsAbout _koho)<0.1:Goto "znova"
+_hlidac DoWatch _koho
+~2
+?!(Alive _hlidac): Exit
+~3
+_hlidac Reveal _koho
+Exit

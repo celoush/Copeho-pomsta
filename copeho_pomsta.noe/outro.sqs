@@ -1,0 +1,36 @@
+PlayMusic "man"
+
+konec_kamery=False
+[] Exec "outro_video1.sqs"
+@konec_kamery
+[] Exec "outro_video2.sqs"
+
+hrac SetBehaviour "SAFE"
+boss SetBehaviour "SAFE"
+
+hrac SetIdentity "William"
+hrac2 SetIdentity "William"
+
+vuz SetFuel 0
+
+boss DoMove GetPos vuz
+~1
+@UnitReady boss
+boss PlayMove "StandGetInCar"
+~2.5
+boss MoveInDriver vuz
+;[boss] OrderGetIn True
+~2
+
+boss Action ["EJECT",vuz]
+UnassignVehicle boss
+
+boss DoWatch hrac
+hrac Exec "chuze.sqs"
+
+konec_kamery2=False
+@konec_kamery2
+[] Exec "outro_video3.sqs"
+
+
+Exit

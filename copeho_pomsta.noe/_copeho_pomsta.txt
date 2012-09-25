@@ -1,0 +1,28 @@
+*** COPEHO POMSTA ***
+v1.1
+Autor: Celoush - celoush@seznam.cz - http://celoush.epj.cz/
+Ostrov: Nogova
+Addony: Jen oficiální z Resistance
+Velikost: Megalomanskıch 10 MB :)
+Typ mise: nechutná støíleèka :)
+----------------------------------
+
+Nemám nìjak moc chu psát dlouhé readme, take to shrnu.
+
+Misi jsem zaèal dìlat nìkdy v listopadu 2004, ale nemìl sem chu ji dodìlat. Na to pøišlo a dnes a za dnešní veèír jsem ji dodìlal. Neèekejte od ní nìjaké velké zázraky, protoe jsem ji ani neposílám nìkomu ji otestovat :)
+
+Je to taková celkem netradièní mise. Moná bych to ani mise nenazval. Je to prostì prachsprostá støíleèka ve stylu divokého západu a není ani pøíliš dlouhá. Vznikla sotva za pár hodin a vìtšinu z toho zabralo testování chování nepøátelskıch vojákù se kterım jsem se snail si pohrát a pak mì to pøestalo bavit.
+
+Hudba byla pouita originál od Ennia Morriconeho (z Tenkrát na západì a Kill Bill 2) a ze hry Outlaws.
+
+----------------------------------
+EPJ FOREVER
+
+
+
+v1.1
+- pøidáno spouštìní hudby po loadu.
+- zmìnìna kamera po zabití
+
+v1.2
+- savegame a po intru

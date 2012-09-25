@@ -1,0 +1,23 @@
+?(!muze):Exit
+muze=False
+TitleCut["","WHITE IN",0.1] 
+SetAccTime 0.35
+~2
+muze=True
+~0.5
+?(!muze):Exit
+;TitleCut["","BLACK IN",0.1] 
+SetAccTime 0.45
+~0.1
+SetAccTime 0.55
+~0.1
+SetAccTime 0.65
+~0.1
+SetAccTime 0.75
+~0.1
+SetAccTime 0.85
+~0.1
+SetAccTime 0.95
+~0.1
+SetAccTime 1
+Exit

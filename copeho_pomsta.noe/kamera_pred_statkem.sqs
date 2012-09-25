@@ -1,0 +1,47 @@
+SetAccTime 1
+
+_camera = "camera" CamCreate [0,0,0] 
+_camera CameraEffect ["Internal","Back"]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+
+;=== 13:23:29
+_camera CamSetTarget [63380.24,-76059.32,-23.86]
+_camera CamSetPos [9516.09,8193.72,58.33]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 13:23:57
+_camera CamSetTarget [109214.66,15976.58,-30.62]
+_camera CamSetPos [9511.83,8276.83,3.67]
+_camera CamSetFOV 0.700
+_camera CamCommit 15
+@CamCommitted _camera
+;=== 13:24:14
+_camera CamSetTarget [-76103.16,59838.68,-30.73]
+_camera CamSetPos [9557.50,8279.16,1.44]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 13:24:27
+_camera CamSetTarget [-76103.16,59838.68,-30.42]
+_camera CamSetPos [9570.82,8270.27,2.04]
+_camera CamSetFOV 0.700
+_camera CamCommit 7
+@CamCommitted _camera
+;=== 13:24:44
+_camera CamSetTarget [-69140.44,55647.70,-39118.15]
+_camera CamSetPos [9619.79,8240.75,29.30]
+_camera CamSetFOV 0.700
+_camera CamCommit 10
+@CamCommitted _camera
+
+
+CutRSC ["Default","Plain Down",100]
+_camera CameraEffect ["Terminate","Back"]
+CamDestroy _camera
+
+savegame
+
+;konec_kamery=True
+Exit

@@ -1,0 +1,15 @@
+RemoveAllWeapons _this
+?((Random 2)<1): Goto "dale"
+
+_this AddMagazine "KozliceBall"
+_this AddWeapon "Kozlice"
+_this AddMagazine "KozliceBall"
+_this AddMagazine "KozliceBall"
+_this AddMagazine "KozliceBall"
+
+#dale
+_this AddMagazine "RevolverMag"
+_this AddWeapon "Revolver"
+_this AddMagazine "RevolverMag"
+_this AddMagazine "RevolverMag"
+Exit

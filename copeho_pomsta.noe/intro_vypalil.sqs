@@ -1,0 +1,11 @@
+pocet_strel=pocet_strel+1
+If (pocet_strel==1) Then {"BulletSniperE" CamCreate [(GetPos muz1 Select 0), (GetPos muz1 Select 1), (GetPos muz1 Select 2) +1.52]; muz1 SetDamage 0}
+If (pocet_strel==2) Then {"BulletSniperE" CamCreate [(GetPos muz2 Select 0), (GetPos muz2 Select 1), (GetPos muz2 Select 2) +1.62]; muz2 SetDamage 0}
+If (pocet_strel==3) Then {"BulletSniperE" CamCreate [(GetPos muz3 Select 0), (GetPos muz3 Select 1), (GetPos muz3 Select 2) +1.47]; muz3 SetDamage 0}
+
+If (pocet_strel>3) Then {hrac RemoveAllEventHandlers "fired"}
+~1
+?alive muz1: muz1 setdammage 1
+?alive muz2: muz2 setdammage 1
+?alive muz3: muz3 setdammage 1
+Exit

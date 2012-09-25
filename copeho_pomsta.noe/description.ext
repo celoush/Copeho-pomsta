@@ -1,0 +1,292 @@
+onLoadMission=$STR_OnLoadMission;
+onLoadIntro=$STR_OnLoadIntro;
+onLoadIntroTime = false
+onLoadMissionTime = false
+MinScore = 0
+AvgScore = 5000
+MaxScore = 7600
+showCompass=1
+showGPS=0
+showMap=1
+showNotepad=1
+showWatch=0
+debriefing=1
+
+
+class CfgIdentities
+{
+ 	class William
+	{
+ 		Name = "William S. Cope";
+		face = "Face11";
+		glasses = "none";
+		speaker = "Marc";
+		pitch = 1.05;
+	};
+
+};
+
+
+
+class CfgMusic
+ {
+
+
+tracks[]= 
+ {
+  track2, track1, track3, track5, track6, arena, man
+ };
+
+	class track2
+	 {
+		  name="track2";
+		  sound[]={\music\track2.ogg, db+10, 1.0};
+	 };
+	class man
+	 {
+		  name="man";
+		  sound[]={\music\man.ogg, db+10, 1.0};
+	 };
+
+	class track3
+	 {
+		  name="track3";
+		  sound[]={\music\track3.ogg, db+10, 1.0};
+	 };
+
+	class track1
+	 {
+		  name="track1";
+		  sound[]={\music\track1.ogg, db+10, 1.0};
+	 };	
+	class track5
+	 {
+		  name="track5";
+		  sound[]={\music\track5.ogg, db+10, 1.0};
+	 };	
+	class track6
+	 {
+		  name="track6";
+		  sound[]={\music\track6.ogg, db+10, 1.0};
+	 };	
+	class arena
+	 {
+		  name="arena";
+		  sound[]={\music\arena.ogg, db+10, 1.0};
+	 };	
+
+};
+
+
+class CfgSounds
+{
+	sounds[] = { rep1};
+
+	class rep1
+	{
+		name = "";
+		sound[] = {\sounds\rep1.ogg, db+10, 1.0};
+		titles[] =  {0, $STR_rep1};
+		
+	};
+
+};
+
+
+// ---------------- Definice písma -----------------
+// --- Není nutné - Lze použít pøímo názvù písem ---
+#define FontS "tahomaB24"
+#define FontM "tahomaB36"
+#define FontHTML "courierNewB64"
+#define FontHTMLBold "courierNewB64"
+#define FontMAP "courierNewB64"
+#define FontMAIN "SteelfishB64"
+#define FontMAINCZ "SteelfishB64CE"
+#define FontTITLE "SteelfishB128"
+#define FontTITLEHalf "SteelfishB64"
+#define FontBOOK "garamond64"
+#define FontNOTES "AudreysHandI48"
+
+// ---------------- Definice typù objektù ----------
+// --- Není nutné - Lze použít pøímo èísla typu  ---
+#define CT_STATIC		0
+
+#define ST_CENTER		2
+#define ST_MULTI		16
+#define ST_SHADOW		256
+#define ST_NO_RECT		512
+
+// ------------ Základní tøídy ----------------
+class RscPicture 
+{ 
+	type=0; 
+	idc=-1; 
+	style=48; 
+	colorBackground[]={0,0,0,1}; 
+	colorText[]={1,1,1,1}; 
+	font="tahomaB24"; 
+	size=0; 
+}; 
+
+class RscText
+{
+	type=0
+	idc=4294967295
+	style=0
+	h=0.040000;
+	colorBackground[]={0,0,0,0};
+	colorText[]={0.780000,0.080000,0.520000,0.750000};
+	font="tahomaB24";
+	sizeEx=0.020000;
+};
+
+class RscBackground
+{
+	type=CT_STATIC
+	idc=-1
+	style=ST_3D_BORDER
+	x=0.150000;
+	y=0.150000;
+	w=0.700000;
+	h=0.700000;
+	text="";
+	colorBackground[]={1,1,1,1};
+	colorText[]={1,0,1,0};
+	font="tahomaB24";
+	sizeEx=0
+};
+
+// ----------------- Tøídy titulkù -------------------
+class RscTitles 
+{ 
+	titles[] = 
+	{
+
+		titlesorb,
+		titlesceloush,
+		titlesuvadi,
+		titleskonec,
+		obrazok,
+	};
+
+	class titlesorb
+	{
+		name = "";
+		duration = 6;
+		idd = -1;
+		movingEnable = false;
+		
+		controls[]= {text};
+
+		class text: RscText
+		{
+			style = ST_MULTI + ST_CENTER + ST_NO_RECT;
+			lineSpacing = 1.0;
+			text = $STR_title3;
+			x = 0.17; y = 0.4; w = 0.66; h = 0.1;
+			colorText[] = {0, 0.5, 0, 1};
+			font = SteelfishB128;
+			sizeEx = 0.25;
+			size = 1.1;
+		};
+
+	};
+
+	class titleskonec
+	{
+		name = "";
+		duration = 6;
+		idd = -1;
+		movingEnable = false;
+		
+		controls[]= {text};
+
+		class text: RscText
+		{
+			style = ST_MULTI + ST_CENTER + ST_NO_RECT;
+			lineSpacing = 1.0;
+			text = $STR_title4;
+			x = 0.17; y = 0.4; w = 0.66; h = 0.1;
+			colorText[] = {0, 0.5, 0, 1};
+			font = SteelfishB128;
+			sizeEx = 0.25;
+			size = 1.1;
+		};
+
+	};
+
+	class titlesceloush
+	{
+		name = "";
+		duration = 6;
+		idd = -1;
+		movingEnable = false;
+		
+		controls[]= {text};
+
+		class text: RscText
+		{
+			style = ST_MULTI + ST_CENTER + ST_NO_RECT;
+			lineSpacing = 1.0;
+			text = $STR_title1;
+			x = 0.17; y = 0.4; w = 0.66; h = 0.1;
+			colorText[] = {0, 0.5, 0, 1};
+			font = SteelfishB128;
+			sizeEx = 0.25;
+			size = 0.7;
+		};
+
+	};
+
+	class titlesuvadi
+	{
+		name = "";
+		duration = 6;
+		idd = -1;
+		movingEnable = false;
+		
+		controls[]= {text};
+
+		class text: RscText
+		{
+			style = ST_MULTI + ST_CENTER + ST_NO_RECT;
+			lineSpacing = 1.0;
+			text = $STR_title2;
+			x = 0.17; y = 0.4; w = 0.66; h = 0.1;
+			colorText[] = {0, 0.5, 0, 1};
+			font = SteelfishB128;
+			sizeEx = 0.25;
+			size = 0.7;
+		};
+
+	};
+
+  class obrazok
+  {
+    idd=-1;
+    movingEnable=0;
+    duration=56;
+    fadein=0.1;
+    name="obraz";
+    controls[]={"pic01"};
+    class pic01
+    {
+      type=0;
+      idc=-1;
+      style=48;
+      colorBackground[]={0,0,0,0};
+      text="pic01.jpg"
+      colorText[]={1,1,1,1};
+      font="AudreysHandI48";
+      size=1;
+      x=0;
+      y=0.80;
+      w=1;
+      h=0.20;
+   };
+  };
+
+};
+
+
+

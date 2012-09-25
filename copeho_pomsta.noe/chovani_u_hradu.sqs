@@ -1,0 +1,14 @@
+hrad1 DisableAI "MOVE"
+
+@poplach
+
+hrad2 DoMove GetPos Player
+hrad3 DoMove GetPos Player
+
+hrad10 DoMove GetPos Player
+hrad11 DoMove GetPos Player
+
+{_x SetBehaviour "COMBAT"} ForEach hradnici
+~1
+{_x SetUnitPos "UP"} ForEach hradnici
+Exit

@@ -1,0 +1,8 @@
+; odhal statek
+
+~2
+{_x DoMove GetPos Player} ForEach patraci_statek
+{_x Reveal Player} ForEach patraci_statek
+
+
+Exit

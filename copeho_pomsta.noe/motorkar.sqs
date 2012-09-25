@@ -1,0 +1,36 @@
+_ridic=_this Select 0
+_vuz=_this Select 1
+
+_ridic MoveInDriver _vuz
+
+_pozice = GetPos Player
+_ridic Move _pozice
+_ridic DoMove _pozice
+
+#dokola
+~0.1
+?(_ridic KnowsAbout Player)>0.2: Goto "poplach"
+?(_ridic Distance bod)<50: Goto "poplach"
+Goto "dokola"
+
+#poplach
+_vuz SetFuel 0
+~(2.5+Random 0.7)
+_ridic Action ["EJECT",_vuz]
+UnassignVehicle _ridic
+_ridic setvelocity [0,0,0]
+_vuz SetFuel 1
+
+;_ridic SetDamage 0
+
+_ridic Reveal Player
+
+Goto "zjisti"
+
+#kemp
+~5
+#zjisti
+?(Random 1)>0.5: Goto "kemp"
+_ridic DoMove GetPos Player
+
+Exit

@@ -1,0 +1,111 @@
+_camera = "camera" CamCreate [0,0,0] 
+_camera CameraEffect ["Internal","Back"]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+;=== 21:21:44
+_camera CamSetTarget [-88647.96,13289.65,128.04]
+_camera CamSetPos [10834.30,3126.94,0.59]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+TitleCut["","BLACK IN",1]
+~1
+;=== 21:21:59
+_camera CamSetTarget [-59825.68,65144.80,-33916.48]
+_camera CamSetPos [10844.91,3123.38,3.06]
+_camera CamSetFOV 0.700
+_camera CamCommit 6
+~5
+TitleCut["","BLACK OUT",1]
+~1
+TitleCut["","BLACK IN",1]
+
+;=== 21:29:14
+_camera CamSetTarget [87044.47,67862.10,127.98]
+_camera CamSetPos [10827.69,3124.15,0.64]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+
+;=== 21:29:28
+_camera CamSetTarget [-34039.99,92488.38,128.08]
+_camera CamSetPos [10833.72,3122.00,0.64]
+_camera CamSetFOV 0.700
+_camera CamCommit 7
+~6
+TitleCut["","BLACK OUT",1]
+~1
+TitleCut["","BLACK IN",1]
+
+;=== 21:30:32
+_camera CamSetTarget [-87278.84,22399.34,127.81]
+_camera CamSetPos [10844.66,3117.02,0.29]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 21:30:49
+_camera CamSetTarget [-88073.61,-11539.46,127.72]
+_camera CamSetPos [10844.89,3127.82,0.29]
+_camera CamSetFOV 0.700
+_camera CamCommit 7
+~6.95
+;=== 21:30:59
+_camera CamSetTarget [-87736.72,-10728.75,9595.15]
+_camera CamSetPos [10844.89,3127.82,0.29]
+_camera CamSetFOV 0.016
+_camera CamCommit 6
+@CamCommitted _camera
+
+boss SetMimic "Angry"
+~2.5
+
+;=== 21:36:49
+_camera CamSetTarget [102225.11,-3015.64,40271.18]
+_camera CamSetTarget hrac
+_camera CamSetPos [10842.81,3126.94,1.31]
+_camera CamSetFOV 0.434
+_camera CamCommit 0
+@CamCommitted _camera
+
+hrac SetMimic "Angry"
+_camera CamSetFOV 0.334
+_camera CamCommit 5
+@CamCommitted _camera
+
+;-- kostel
+
+;=== 21:40:27
+_camera CamSetTarget [-92945.45,-3000.39,146.32]
+_camera CamSetPos [6580.38,6726.23,40.93]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+TitleCut["","WHITE IN",1.5]
+;=== 21:40:42
+_camera CamSetTarget [-92945.45,-3000.39,146.36]
+_camera CamSetPos [6580.38,6726.23,1.01]
+_camera CamSetFOV 0.700
+_camera CamCommit 13
+~12.75
+_camera CamSetFOV 0.850
+_camera CamCommit 2
+~1
+
+hrac2 DoMove GetPos zena2
+hrac2 SetUnitPos "UP"
+
+~1
+
+;=== 21:41:21
+_camera CamSetTarget [-92945.45,-3000.39,146.69]
+_camera CamSetPos [6706.17,6738.56,15.87]
+_camera CamSetFOV 0.800
+_camera CamCommit 30
+@CamCommitted _camera
+
+konec_kamery2=True
+
+;CutRSC ["Default","Plain Down",100]
+;_camera CameraEffect ["Terminate","Back"]
+;CamDestroy _camera
+
+Exit

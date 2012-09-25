@@ -1,0 +1,74 @@
+SetAccTime 1
+
+_camera = "camera" CamCreate [0,0,0] 
+_camera CameraEffect ["Internal","Back"]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+
+TitleCut["","BLACK IN",2]
+;=== 23:23:15
+_camera CamSetTarget [-41036.04,-79173.09,192.29]
+_camera CamSetPos [8647.67,7611.30,4.74]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 23:23:24
+_camera CamSetTarget [-41036.04,-79173.09,192.30]
+_camera CamSetPos [8619.50,7627.46,41.77]
+_camera CamSetFOV 0.700
+_camera CamCommit 12
+~10
+TitleCut["","BLACK OUT",2]
+~2
+TitleCut["","BLACK IN",2]
+;=== 23:23:37
+_camera CamSetTarget [21019.48,-90104.55,-13260.96]
+_camera CamSetPos [9562.22,8318.10,6.81]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 23:23:46
+_camera CamSetTarget [21019.48,-90104.55,-13260.90]
+_camera CamSetPos [9533.47,8314.73,7.06]
+_camera CamSetFOV 0.700
+_camera CamCommit 12
+~10
+TitleCut["","BLACK OUT",2]
+~2
+TitleCut["","BLACK IN",2]
+;=== 23:24:06
+_camera CamSetTarget [61673.05,-80911.57,-736.33]
+_camera CamSetPos [10616.31,5067.78,6.84]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 23:24:18
+_camera CamSetTarget [97376.27,-7372.40,-47954.34]
+_camera CamSetPos [10593.05,5033.08,31.13]
+_camera CamSetFOV 0.700
+_camera CamCommit 12
+~10
+TitleCut["","BLACK OUT",2]
+~2
+TitleCut["","BLACK IN",2]
+;=== 23:24:33
+_camera CamSetTarget [44712.05,-89838.19,124.16]
+_camera CamSetPos [10459.40,4112.64,2.00]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 23:24:42
+_camera CamSetTarget [55264.13,-85273.48,1675.07]
+_camera CamSetPos [10434.24,4101.44,2.00]
+_camera CamSetFOV 0.700
+_camera CamCommit 12
+~10
+TitleCut["","BLACK OUT",2]
+~2
+
+;CutRSC ["Default","Plain Down",100]
+;_camera CameraEffect ["Terminate","Back"]
+;CamDestroy _camera
+
+konec_kamery=True
+Exit

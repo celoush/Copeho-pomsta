@@ -1,0 +1,5 @@
+~2
+{_x DoMove GetPos Player} ForEach patraci
+{_x Reveal Player} ForEach patraci
+{_x Reveal Player} ForEach kempri
+Exit

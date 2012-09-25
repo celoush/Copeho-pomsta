@@ -1,0 +1,7 @@
+RemoveAllWeapons _this 
+_this AddMagazine "RevolverMag"
+_this AddWeapon "Revolver"
+_this AddMagazine "RevolverMag"
+_this AddMagazine "RevolverMag"
+_this AddWeapon "Binocular"
+Exit 

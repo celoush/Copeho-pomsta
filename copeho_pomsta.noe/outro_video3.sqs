@@ -1,0 +1,90 @@
+_camera = "camera" CamCreate [0,0,0] 
+_camera CameraEffect ["Internal","Back"]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+
+;=== 22:15:12
+_camera CamSetTarget [-76208.91,1309.11,-49020.54]
+_camera CamSetPos [10863.65,3125.50,9.60]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 22:15:17
+_camera CamSetTarget [-76208.91,1309.11,-49020.15]
+_camera CamSetPos [10852.95,3125.27,9.60]
+_camera CamSetFOV 0.700
+_camera CamCommit 8
+TitleCut["","WHITE IN",2]
+@CamCommitted _camera
+;=== 22:15:52
+_camera CamSetTarget [109702.45,18078.54,-522.97]
+_camera CamSetPos [10828.97,3124.92,1.09]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 22:16:15
+_camera CamSetTarget [45252.27,97004.87,-523.36]
+_camera CamSetPos [10831.66,3117.70,1.09]
+_camera CamSetFOV 0.712
+_camera CamCommit 5
+@CamCommitted _camera
+_camera CamSetFOV 0.822
+_camera CamCommit 2
+@CamCommitted _camera
+;=== 22:16:36
+_camera CamSetTarget [-86050.98,27837.71,-523.04]
+_camera CamSetPos [10845.40,3125.94,0.42]
+_camera CamSetFOV 0.546
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 22:16:50
+_camera CamSetTarget [89568.04,64651.91,4175.13]
+_camera CamSetPos [10840.62,3124.59,1.45]
+_camera CamSetFOV 0.110
+_camera CamCommit 7
+@CamCommitted _camera
+~2
+;=== 22:17:03
+_camera CamSetTarget [-88234.35,16571.35,1953.28]
+_camera CamSetPos [10840.62,3124.59,1.45]
+_camera CamSetFOV 0.015
+_camera CamCommit 0
+@CamCommitted _camera
+~3
+;=== 22:17:21
+_camera CamSetTarget [6121.64,102980.91,1952.93]
+_camera CamSetPos [10837.92,3108.46,1.45]
+_camera CamSetFOV 0.446
+_camera CamCommit 0
+@CamCommitted _camera
+
+~5
+5 FadeMusic 0
+~5
+
+hrac Exec "vybaveni.sqs"
+
+hrac SetSkill 1
+hrac DoTarget boss
+hrac DoFire boss
+~0.3
+
+boss SetSkill 0
+boss DoTarget hrac
+boss DoFire hrac
+
+~5
+
+TitleCut["","BLACK OUT",5]
+6 FadeMusic 1
+~6
+TitleRsc ["titleskonec", "PLAIN"]
+9 FadeMusic 0
+~11
+
+;CutRSC ["Default","Plain Down",100]
+;_camera CameraEffect ["Terminate","Back"]
+;CamDestroy _camera
+
+konec=True
+Exit

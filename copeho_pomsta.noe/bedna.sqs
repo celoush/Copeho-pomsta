@@ -1,0 +1,7 @@
+ClearMagazineCargo _this
+_this AddMagazineCargo ["KozliceBall",10]
+_this AddWeaponCargo ["Kozlice",2]
+_this AddMagazineCargo ["RevolverMag",20]
+_this AddWeaponCargo ["Revolver",5]
+Exit
+

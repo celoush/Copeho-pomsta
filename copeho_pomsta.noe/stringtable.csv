@@ -1,0 +1,16 @@
+LANGUAGE,Czech,English,Comment
+
+------------------------------------ Main Titles -----------------------------------------
+
+STR_OnLoadMission, "Nahrávám misi","Loading mission",
+STR_OnLoadIntro, "Prosím strpení...","Please wait...",
+
+STR_MISSION_KILLED,"Tvá pomsta nebyla naplnìna","Revenge is all"
+
+STR_title1, "Celoush","Celoush",
+
+STR_title2, "uvádí","present",
+
+STR_title3, "Copeho pomsta","Cope´s revenge",
+
+STR_title4, "Konec","The End",

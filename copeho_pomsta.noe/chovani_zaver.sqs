@@ -1,0 +1,24 @@
+Player SetPos GetPos (Object 251)
+Player Exec "vybaveni_hrac.sqs"
+bod SetPos GetPos player
+
+PlayMusic "track3"
+
+[zaver1,moto1] Exec "motorkar.sqs" 
+[zaver2,moto2] Exec "motorkar.sqs" 
+[zaver3,moto3] Exec "motorkar.sqs" 
+[zaver4,moto4] Exec "motorkar.sqs" 
+[zaver5,moto5] Exec "motorkar.sqs" 
+
+{_x Exec "vybaveni_hrad.sqs"} ForEach motorkari
+
+[] Exec "konec_zaver.sqs"
+[] exec "kamera_pred_zaverem.sqs"
+
+hraju_vila=false
+hraju_gang=true
+
+;savegame
+
+
+Exit

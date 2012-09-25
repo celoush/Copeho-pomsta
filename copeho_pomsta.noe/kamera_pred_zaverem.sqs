@@ -1,0 +1,47 @@
+SetAccTime 1
+
+player setdir 180
+
+_camera = "camera" CamCreate [0,0,0] 
+_camera CameraEffect ["Internal","Back"]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+
+;=== 14:26:39
+_camera CamSetTarget [53287.31,-86248.03,124.82]
+_camera CamSetPos [10441.35,4108.07,19.40]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+
+;=== 14:26:49
+_camera CamSetTarget [53287.31,-86248.03,124.58]
+_camera CamSetPos [10441.84,4107.05,0.98]
+_camera CamSetFOV 0.700
+_camera CamCommit 4
+@CamCommitted _camera
+
+_camera CamSetFOV 0.500
+_camera CamCommit 3
+@CamCommitted _camera
+
+;=== 14:27:07
+_camera CamSetTarget [41176.10,-91139.53,124.52]
+_camera CamSetPos [10536.21,3882.50,4.46]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 14:27:28
+_camera CamSetTarget [41176.10,-91139.53,124.60]
+_camera CamSetPos [10637.81,3602.95,4.39]
+_camera CamSetFOV 0.700
+_camera CamCommit 15
+@CamCommitted _camera
+
+CutRSC ["Default","Plain Down",100]
+_camera CameraEffect ["Terminate","Back"]
+CamDestroy _camera
+
+savegame
+
+Exit

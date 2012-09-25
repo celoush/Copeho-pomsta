@@ -1,0 +1,14 @@
+_this PlayMove "CivilWalkF"
+~1.4
+_this PlayMove "CivilWalkF"
+~1.4
+_this PlayMove "CivilWalkF"
+~1.4
+_this PlayMove "CivilWalkF"
+~1.4
+_this PlayMove "CivilWalkF"
+~1.4
+_this PlayMove "CivilWalkF"
+~1.4
+_this DoWatch boss
+Exit

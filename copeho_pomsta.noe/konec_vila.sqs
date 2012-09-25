@@ -1,0 +1,47 @@
+@(!Alive vila1)
+@(!Alive vila2)
+@(!Alive vila3)
+@(!Alive vila4)
+@(!Alive vila5)
+@(!Alive vila6)
+@(!Alive vila7)
+@(!Alive vila8)
+@(!Alive vila9)
+@(!Alive vila10)
+
+PlayMusic "track1"
+12 fademusic 0
+TitleCut["","BLACK IN",2]
+DisableUserInput True
+
+SetAccTime 1
+
+_camera = "camera" CamCreate [0,0,0] 
+_camera CameraEffect ["Internal","Back"]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+
+_camera CamSetPos [(GetPos Player Select 0)+3, (GetPos Player Select 1)+3, 4]
+_camera CamSetTarget Player
+_camera CamCommit 0
+@CamCommitted _camera
+
+_camera CamSetPos [(GetPos Player Select 0)+10, (GetPos Player Select 1)+10, 24]
+_camera CamCommit 12
+~10
+TitleCut["","BLACK OUT",2]
+~2
+TitleCut["","BLACK IN",2]
+
+0 fademusic 1
+
+CutRSC ["Default","Plain Down",100]
+_camera CameraEffect ["Terminate","Back"]
+CamDestroy _camera
+
+;TitleCut["","BLACK OUT",2]
+
+DisableUserInput False
+[] Exec "chovani_zaver.sqs"
+
+Exit

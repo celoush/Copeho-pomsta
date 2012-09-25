@@ -1,0 +1,8 @@
+; odhal u vily
+
+~2
+{_x DoMove GetPos Player} ForEach patraci_vila
+{_x Reveal Player} ForEach patraci_vila
+
+
+Exit

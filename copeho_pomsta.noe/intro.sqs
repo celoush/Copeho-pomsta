@@ -1,0 +1,316 @@
+PlayMusic "arena"
+
+muz1 SetBehaviour "SAFE"
+muz2 SetBehaviour "SAFE"
+muz3 SetBehaviour "SAFE"
+
+muz1 SetCaptive True
+muz2 SetCaptive True
+muz3 SetCaptive True
+hrac SetCaptive True
+
+hrac SetIdentity "William"
+(Driver letadlo) SetIdentity "William"
+hrac Exec "vybaveni_souboj.sqs"
+hrac SetBehaviour "SAFE"
+
+{_x Exec "vybaveni_souboj.sqs"} ForEach [muz1,muz2,muz3]
+
+_camera = "camera" CamCreate [0,0,0] 
+_camera CameraEffect ["Internal","Back"]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+
+TitleCut["","BLACK IN",2]
+muz1 SetMimic "Angry"
+muz2 SetMimic "Angry"
+muz3 SetMimic "Angry"
+
+;=== 16:52:25
+_camera CamSetTarget [43568.64,-85317.28,25.57]
+_camera CamSetPos [1567.26,5426.40,2.00]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 16:52:32
+_camera CamSetTarget [-57325.43,-75392.22,25.39]
+_camera CamSetPos [1567.26,5426.40,2.00]
+_camera CamSetFOV 0.700
+_camera CamCommit 10
+@CamCommitted _camera
+;=== 17:00:12
+_camera CamSetTarget [101150.18,-1502.42,6195.20]
+_camera CamSetPos [1582.98,5422.34,1.60]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+
+_camera CamSetFOV 0.670
+_camera CamCommit 4
+@CamCommitted _camera
+;=== 16:52:59
+_camera CamSetTarget [93999.32,43686.04,-158.09]
+_camera CamSetPos [1605.50,5467.05,1.62]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 16:53:10
+_camera CamSetTarget [93999.32,43686.04,-157.84]
+_camera CamSetPos [1571.79,5453.08,3.15]
+_camera CamSetFOV 0.700
+_camera CamCommit 10
+@CamCommitted _camera
+
+;=== 17:03:33
+_camera CamSetTarget [-56800.09,-75151.42,-7666.09]
+_camera CamSetPos [1628.28,5642.50,4.60]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 17:03:44
+_camera CamSetTarget [-11317.58,-93203.09,-7662.86]
+_camera CamSetPos [1593.51,5658.43,44.01]
+_camera CamSetFOV 0.700
+_camera CamCommit 14
+@CamCommitted _camera
+
+;=== 17:05:16
+_camera CamSetTarget [86284.22,-47732.32,25.72]
+_camera CamSetPos [1582.94,5424.94,1.59]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+
+_camera CamSetFOV 0.650
+_camera CamCommit 4
+@CamCommitted _camera
+
+;=== 17:06:56
+_camera CamSetTarget [-64327.33,74968.10,-24821.58]
+_camera CamSetPos [1834.40,4285.62,0.60]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 17:07:04
+_camera CamSetTarget [-64327.33,74968.10,-24821.42]
+_camera CamSetPos [1813.16,4308.34,28.72]
+_camera CamSetFOV 0.700
+_camera CamCommit 17
+@CamCommitted _camera
+
+;=== 17:07:47
+_camera CamSetTarget [98937.24,27260.51,6742.33]
+_camera CamSetPos [1582.83,5420.11,1.59]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+
+_camera CamSetFOV 0.650
+_camera CamCommit 4
+@CamCommitted _camera
+
+;=== 17:08:53
+_camera CamSetTarget [-44723.73,-79979.88,-23660.75]
+_camera CamSetPos [1588.63,5429.52,3.08]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 17:09:03
+_camera CamSetTarget [81291.08,-53795.00,-11730.31]
+_camera CamSetPos [1576.42,5428.14,1.51]
+_camera CamSetFOV 0.720
+_camera CamCommit 9
+@CamCommitted _camera
+
+
+;=== 17:11:39
+_camera CamSetTarget [4546.93,-95483.39,25.88]
+_camera CamSetPos [1524.83,4455.03,3.17]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 17:12:05
+_camera CamSetTarget [4546.93,-95483.39,25.88]
+_camera CamSetPos [1522.42,4554.35,3.17]
+_camera CamSetFOV 0.700
+_camera CamCommit 25
+~20
+
+_camera CamSetTarget letadlo
+_camera CamCommit 10
+@CamCommitted _camera
+
+~8
+
+;=== 17:17:14
+_camera CamSetTarget [-19583.46,-92294.47,25.88]
+_camera CamSetPos [1594.43,5437.29,2.00]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 17:17:30
+_camera CamSetTarget [-6956.16,-93252.59,-13596.01]
+_camera CamSetPos [1541.19,5444.69,41.86]
+_camera CamSetFOV 0.700
+_camera CamCommit 17
+~16
+TitleCut ["","BLACK OUT",1]
+@CamCommitted _camera
+TitleCut ["","BLACK IN",1]
+
+DeleteVehicle (Driver letadlo)
+DeleteVehicle letadlo
+
+letadlo2 SetPos GetPos poz_letadlo
+hrac SetPos GetPos poz1
+hrac SetMimic "ANGRY"
+
+;=== 17:28:02
+_camera CamSetTarget [190.40,-92723.81,-18836.50]
+_camera CamSetPos [1575.85,5477.86,3.72]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 17:28:09
+_camera CamSetTarget [190.40,-92723.81,-18836.65]
+_camera CamSetPos [1575.28,5456.62,2.82]
+_camera CamSetFOV 0.700
+_camera CamCommit 12
+@CamCommitted _camera
+
+hrac SetPos GetPos poz1
+;=== 17:28:36
+;_camera CamSetTarget [-94793.69,-12820.94,19519.20]
+;_camera CamSetPos [1576.17,5423.00,1.50]
+;_camera CamSetFOV 0.700
+;_camera CamCommit 0
+;@CamCommitted _camera
+
+;=== 18:16:09
+_camera CamSetTarget [-98412.82,4276.46,25.58]
+_camera CamSetPos [1576.45,5422.70,1.60]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+
+_camera CamSetFOV 0.650
+_camera CamCommit 4
+@CamCommitted _camera
+
+;=== 17:29:44
+_camera CamSetTarget [98167.91,-20380.42,-1861.79]
+_camera CamSetPos [1572.97,5423.85,1.50]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 17:29:49
+_camera CamSetTarget [101244.99,13287.94,-1861.34]
+_camera CamSetPos [1572.73,5421.56,1.50]
+_camera CamSetFOV 0.700
+_camera CamCommit 8
+@CamCommitted _camera
+
+;=== 17:30:38
+_camera CamSetTarget [85041.74,-1835.49,54632.21]
+_camera CamSetPos [1583.02,5422.34,1.42]
+_camera CamSetFOV 0.275
+_camera CamCommit 0
+@CamCommitted _camera
+~3
+;=== 17:30:59 --- ze by ksicht
+_camera CamSetTarget [-88551.30,7848.40,43282.17]
+_camera CamSetPos [1576.15,5422.88,1.46]
+_camera CamSetFOV 0.257
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 21:16:16
+_camera CamSetTarget [-94169.55,-61.59,28355.60]
+_camera CamSetPos [1576.49,5422.71,1.46]
+_camera CamSetFOV 0.116
+_camera CamCommit 0
+@CamCommitted _camera
+
+~3
+;=== 17:31:29
+_camera CamSetTarget [96534.38,-24043.07,10790.41]
+_camera CamSetPos [1581.85,5420.86,1.47]
+_camera CamSetFOV 0.057
+_camera CamCommit 0
+@CamCommitted _camera
+~3
+;=== 17:31:43
+_camera CamSetTarget [100685.76,-7241.14,4193.91]
+_camera CamSetPos [1578.78,5425.04,1.47]
+_camera CamSetFOV 0.021
+_camera CamCommit 0
+@CamCommitted _camera
+~3
+
+;=== 18:13:57
+_camera CamSetTarget [-21601.98,-91847.64,25.71]
+_camera CamSetPos [1584.67,5426.65,1.55]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 18:14:04
+_camera CamSetTarget [49640.84,-82267.53,25.88]
+_camera CamSetPos [1581.45,5426.80,1.55]
+_camera CamSetFOV 0.700
+_camera CamCommit 12
+hrac SetBehaviour "COMBAT"
+~1
+hrac SetUnitPos "UP"
+~3
+pocet_strel=0
+hrac AddEventHandler ["Fired",{[] Exec "intro_vypalil.sqs"}]
+
+muz1 SetBehaviour "COMBAT"
+~0.08
+muz2 SetBehaviour "COMBAT"
+~0.05
+muz3 SetBehaviour "COMBAT"
+~0.07
+
+hrac Fire "Revolver"
+~0.2
+hrac Fire "Revolver"
+~0.2
+hrac Fire "Revolver"
+~0.2
+;hrac Fire "Revolver"
+
+~8
+TitleCut ["","BLACK OUT",2]
+~2
+TitleCut ["","BLACK IN",2]
+
+hrac MoveInDriver vuz
+vuz SetDir 90
+vuz  SetPos GetPos (Object 160787)
+hrac  DoMove GetPos (Object 4920)
+
+;=== 18:41:07
+_camera CamSetTarget [99504.99,-15237.47,26.12]
+_camera CamSetPos [1739.90,5785.99,3.09]
+_camera CamSetFOV 0.700
+_camera CamCommit 0
+@CamCommitted _camera
+;=== 18:41:18
+_camera CamSetTarget [92633.80,47459.45,28.41]
+_camera CamSetPos [1747.15,5750.73,39.08]
+_camera CamSetFOV 0.700
+_camera CamCommit 35
+~20
+TitleCut ["","BLACK OUT",8]
+~10
+
+titleRsc ["titlesceloush", "PLAIN"]
+~5
+titleRsc ["titlesuvadi", "PLAIN"]
+~5
+10 FadeMusic 0
+TitleRsc ["titlesorb", "PLAIN"]
+~13.5
+
+konec=True
+Exit

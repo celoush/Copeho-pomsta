@@ -1,0 +1,31 @@
+Player SetPos GetPos (Object 33214)
+Player Exec "vybaveni_hrac.sqs"
+
+Player SetPos [GetPos Player Select 0,GetPos Player Select 1,0]
+
+{_x Exec "vybaveni_hrad.sqs"} ForEach vilari
+
+Player RemoveAllEventHandlers "Fired"
+Player AddEventHandler ["Fired",{[] Exec "max.sqs"}]
+
+popl_statID=Player AddEventHandler["Fired",{poplach_vila=True;}]
+{DeleteVehicle _x} ForEach statkari
+{[_x,Player] Exec "vidim_ho_vila.sqs"} ForEach vilari
+[] Exec "kamera_pred_vilou.sqs"
+;SaveGame
+PlayMusic "track6"
+hraju_statek=False
+hraju_vila=True
+
+@poplach_vila
+Player RemoveEventHandler["Fired",popl_statID]
+Player AddEventHandler["Fired",{[] Exec "odhal_vila.sqs"}]
+
+{_x Reveal Player} ForEach vilari
+{_x SetBehaviour "COMBAT"} ForEach vilari
+~1
+{_x SetUnitPos "UP"} ForEach vilari
+
+{_x DoMove GetPos Player} ForEach patraci_statek
+[] Exec "konec_vila.sqs"
+Exit

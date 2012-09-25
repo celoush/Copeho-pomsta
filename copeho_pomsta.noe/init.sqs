@@ -1,0 +1,52 @@
+;Copeho pomsta
+hradnici=[hrad1,hrad2,hrad3,hrad4,hrad5,hrad6,hrad7,hrad8,hrad9,hrad10,hrad11]
+kempri=[hrad1,hrad4,hrad5,hrad6,hrad7,hrad8,hrad9]
+patraci=[hrad2,hrad3,hrad10,hrad11]
+
+statkari=[statek1,statek2,statek3,statek4,statek5,statek6,statek7,statek8,statek9,statek10]
+patraci_statek=[statek5,statek6,statek7,statek8,statek9,statek10]
+
+vilari=[vila1,vila2,vila3,vila4,vila5,vila6,vila7,vila8,vila9,vila10]
+patraci_vila=[vila5,vila6,vila7,vila8,vila9,vila10]
+
+motorkari=[zaver1,zaver2,zaver3,zaver4,zaver5]
+
+Player Exec "vybaveni.sqs"
+Player SetIdentity "William"
+
+[] Exec "chovani_u_kostela.sqs"
+[] Exec "chovani_u_hradu.sqs"
+{[_x,Player] Exec "vidim_ho.sqs"} ForEach hradnici
+[ukost1,Player] Exec "vidim_ho.sqs"
+[ukost2,Player] Exec "vidim_ho.sqs"
+
+{_x AddEventHandler ["Fired",{poplach=True}]} ForEach hradnici
+ukost1 AddEventHandler ["Fired",{poplach=True}]
+ukost2 AddEventHandler ["Fired",{poplach=True}]
+
+IDo=Player AddEventHandler ["Fired",{_this Exec "prvni_palba.sqs"}]
+Player AddEventHandler ["Fired",{[] Exec "max.sqs"}]
+
+{_x Exec "vybaveni_hrad.sqs"} ForEach hradnici
+ukost1 Exec "vybaveni_hrad.sqs"
+
+PlayMusic "track2"
+
+; nastaveni statku
+
+poplach_statek=False
+poplach_vila=False
+hraju_hrad=True
+hraju_statek=false
+hraju_vila=false
+hraju_gang=false
+
+[] Exec "konec_hradu.sqs"
+[] exec "kamera_pred_hradem.sqs"
+[] exec "kontrola_hudby.sqs"
+
+{_x SetBehaviour "SAFE"} ForEach statkari
+{_x SetBehaviour "SAFE"} ForEach hradnici
+{_x SetBehaviour "SAFE"} ForEach vilari
+
+Exit

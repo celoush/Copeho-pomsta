@@ -1,0 +1,35 @@
+; nastaveni chovani hlidky u kostela
+
+ukost1 SetUnitPos "UP"
+ukost2 SetUnitPos "UP"
+~1
+ukost2 SwitchMove "EffectStandSitDown"
+
+@poplach
+
+{_x RemoveAllEventHandlers "Fired"} ForEach hradnici 
+ukost2 RemoveAllEventHandlers "Fired"
+ukost1 RemoveAllEventHandlers "Fired"
+
+ukost1 SetCombatMode "RED"
+ukost2 SetCombatMode "RED"
+
+ukost1 SetBehaviour "AWARE"
+ukost2 SetBehaviour "AWARE"
+
+ukost1 Reveal Player
+ukost2 Move GetPos bedna1
+ukost2 DoMove GetPos bedna1
+
+~5
+@(ukost2 Distance bedna1)<2
+
+ukost2 SwitchMove "TakeFlag"
+~0.7
+ukost2 AddMagazine "RevolverMag"
+ukost2 AddWeapon "Revolver"
+
+ukost2 Reveal Player
+ukost2 DoMove GetPos Player
+
+Exit

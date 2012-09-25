@@ -1,0 +1,5 @@
+poplach=True
+;Player RemoveAllEventHandlers "fired"
+Player RemoveEventHandler ["Fired", IDo]
+Player AddEventHandler ["Fired",{[] Exec "dalsi_palba.sqs"}]
+Exit
